@@ -1,0 +1,155 @@
+/* Navbar Container */
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+}
+
+/* Logo Styling */
+.navbar .logo {
+    width: 150px;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 18px;
+    color: rgb(7, 7, 125);
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+/* Active Menu Item */
+.navbar .active {
+    border-bottom: 2px solid #49557e;
+    padding-bottom: 2px;
+}
+
+/* Right Section of Navbar */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Search Icon and Notification Dot */
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(23, 12, 116);
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+}
+
+/* Button Styling */
+.navbar button {
+    background: none;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid rgb(23, 12, 116);
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+/* Profile Dropdown */
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff2ef;
+    border: 4px solid rgb(23, 12, 116);
+    outline: 2px solid white;
+    border-radius: 4px;
+    padding: 12px 25px;
+    z-index: 1;
+    list-style: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown li:hover {
+    color: rgb(23, 12, 116);
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right {
+        gap: 30px;
+    }
+    .navbar-right img {
+        width: 22px;
+    }
+    .navbar button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right {
+        gap: 20px;
+    }
+    .navbar-right img {
+        width: 20px;
+    }
+    .navbar button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+}

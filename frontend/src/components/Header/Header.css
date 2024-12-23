@@ -1,0 +1,115 @@
+/* Header Section */
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.header-image.active {
+    opacity: 1;
+}
+
+/* Header Contents */
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.header-contents h2 {
+    font-weight: 600;
+    color: black;
+    font-size: max(4.0vw, 20px);
+    font-family: cursive;
+}
+
+.header-contents p {
+    color: black;
+    font-size: 1.2vw;
+    font-family: cursive;
+}
+
+/* Call-to-Action Button */
+.header-contents button {
+    border: none;
+    color: #494949;
+    font-weight: 600;
+    padding: 1.2vw 2.5vw;
+    background-color: #f9f9f9;
+    font-size: max(1.2vw, 14px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-contents button:hover {
+    background-color: #ececec;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1050px) {
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-contents {
+        max-width: 65%;
+    }
+    .header-contents p {
+        display: none;
+    }
+    .header-contents button {
+        padding: 2.2vw 4.2vw;
+        font-size: max(1.2vw, 12px);
+    }
+}
+/* Carousel Indicators */
+.indicators {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.8vw;
+  }
+  
+  .indicator {
+    width: 1vw;
+    height: 1vw;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .indicator.active {
+    background-color: #ffffff;
+    transform: scale(1.2);
+  }
+  
+  .indicator:hover {
+    background-color: #f3f3f3;
+  }
+  
